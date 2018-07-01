@@ -1,0 +1,11 @@
+#!/bin/bash -e
+
+sed -i 's/#NOMAD_REGION/'"$NOMAD_REGION"''/ /usr/share/nginx/html/index.html
+sed -i 's/#NOMAD_DC/'"$NOMAD_DC"''/ /usr/share/nginx/html/index.html
+sed -i 's/#NOMAD_JOB_NAME/'"$NOMAD_JOB_NAME"''/ /usr/share/nginx/html/index.html
+sed -i 's/#NOMAD_GROUP_NAME/'"$NOMAD_GROUP_NAME"''/ /usr/share/nginx/html/index.html
+sed -i 's/#NOMAD_TASK_NAME/'"$NOMAD_TASK_NAME"''/ /usr/share/nginx/html/index.html
+sed -i 's/#NOMAD_ALLOC_ID/'"$NOMAD_ALLOC_ID"''/ /usr/share/nginx/html/index.html
+sed -i 's/#NOMAD_IP_http/'"$NOMAD_IP_http"''/ /usr/share/nginx/html/index.html
+
+exec "nginx" "-g daemon off;"
