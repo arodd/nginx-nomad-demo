@@ -7,5 +7,8 @@ sed -i 's/#NOMAD_GROUP_NAME/'"$NOMAD_GROUP_NAME"''/ /usr/share/nginx/html/index.
 sed -i 's/#NOMAD_TASK_NAME/'"$NOMAD_TASK_NAME"''/ /usr/share/nginx/html/index.html
 sed -i 's/#NOMAD_ALLOC_ID/'"$NOMAD_ALLOC_ID"''/ /usr/share/nginx/html/index.html
 sed -i 's/#NOMAD_IP_http/'"$NOMAD_IP_http"''/ /usr/share/nginx/html/index.html
+sed -i 's/#CONSUL_KV_FRUIT/'"$KV_FRUIT"''/ /usr/share/nginx/html/index.html
+sed -i 's/#VAULT_TOKEN/'"$VAULT_TOKEN"''/ /usr/share/nginx/html/index.html
+sed -i 's/#VAULT_AWS_ACCESS/'"$VAULT_AWS_ACCESS"''/ /usr/share/nginx/html/index.html
 
 exec "nginx" "-g daemon off;"

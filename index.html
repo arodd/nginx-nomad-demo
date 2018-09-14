@@ -1,9 +1,6 @@
 <html>
-  <meta http-equiv="cache-control" content="no-cache" />
-  <meta http-equiv="expires" content="0" />
-  <meta http-equiv="pragma" content="no-cache" />
   <body>
-    <h1>demo</h1>
+    <h1>profitapp</h1>
     Region: #NOMAD_REGION<br>
     AZ: #NOMAD_DC<br>
     Job: #NOMAD_JOB_NAME<br>
@@ -11,5 +8,8 @@
     Task: #NOMAD_TASK_NAME<br>
     Alloc: #NOMAD_ALLOC_ID<br>
     IP: #NOMAD_IP_http<br>
+    KV_FRUIT: #CONSUL_KV_FRUIT<br>
+    VAULT_TOKEN: #VAULT_TOKEN<br>
+    AWS_ACCESS_KEY: #VAULT_AWS_ACCESS<br>
   </body>
 </html>
